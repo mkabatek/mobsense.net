@@ -1,6 +1,6 @@
 
 ---
 
-Copyright (c) 2015 streamn^N Inc.
+Copyright (c) 2016 streamn^N Inc.
 
 ---

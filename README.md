@@ -1,5 +1,7 @@
 #MobSense
 
+[mobsense.net web server](https://mobsense.net)
+
 ####Known Issues:  v0.0.1
 * Auto update date at button of the page
 * Clear old user data when switching logins
@@ -38,6 +40,7 @@
 
 * npm install -d
 * This assumes you already have node.js, mongodb, and npm configured and installed.
+* You will need to update the Facebook, Twitter, and Google API keys.
 * node app.js
 
 Questions and suggestions for improvement are welcome. Work is (c) 2016 Stream^N Inc.
