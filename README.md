@@ -1,13 +1,11 @@
 #MobSense
 
 ####Known Issues:  v0.0.1
-Auto update date at button of the page
-Clear old user data when switching logins
-Terminate socket.io on logout
-Update tutorial iOS
-Update tutorial mobsense.net
-Local authentication iOS/Android
-
+* Auto update date at button of the page
+* Clear old user data when switching logins
+* Terminate socket.io on logout
+* Update tutorial mobsense.net
+* Local authentication iOS/Android
 
 ####Feature Request:  v0.0.1
 
@@ -31,8 +29,8 @@ Local authentication iOS/Android
 * [EmailJS](http://github.com/eleith/emailjs) - Node.js > SMTP Server Middleware
 * [Moment.js](http://momentjs.com/) - Lightweight Date Library
 * [Twitter Bootstrap](http://twitter.github.com/bootstrap/) - UI Component & Layout Library
-* [socket.io]
-* [passportjs] Authentication
+* [socket.io](http://socket.io) Socket.IO enables real-time bidirectional event-based communication.
+* [Passport](http://passportjs.org/) Passport is authentication middleware for Node.js.
 
 ***
 
