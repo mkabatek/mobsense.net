@@ -35,7 +35,9 @@
 ***
 
 ####Installation & Setup
-This assumes you already have node.js, npm installed, configured and installed.
+
+* npm install -d
+* This assumes you already have node.js, mongodb, and npm configured and installed.
+* node app.js
 
 Questions and suggestions for improvement are welcome. Work is (c) 2016 Stream^N Inc.
-# mobsense.net
