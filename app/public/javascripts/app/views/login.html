@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Stream<sup>N</sup>Login</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="../../dist/css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+     <!--
+     <link href="/stylesheets/vendor/bootstrap/carousel.css" rel="stylesheet"> 
+     -->
+  </head>
+
+
+  <body>
+    <div id= 'login-container' class = 'container'>
+        
+                <form method="post" class='form-group'>
+                  <h1 class= 'mainHeader'>Hello</h1>
+                  <p>Please login to your account</p>
+                  <div class="form-group">
+                  <label>Email Address</label>
+                  <input type="text" name="email" id='user-tf' class="form-control required" data-bind="value: email">
+                  </div>
+                  <div class="form-group">
+                  <label>Password</label> 
+                  <input type="password" name="password" id='pass-tf' class="form-control required" data-bind="value: pass">
+                  </div>
+                  <br>
+                  <div class="form-group">
+                  <button type="submit" data-bind="click: submit" class="btn-login btn btn-primary form-control">
+                      <i class="icon-lock icon-white"></i>
+                      Sign in
+                  </button>
+                  </div>
+
+                    <hr class="featurette-divider">
+
+                  <div class="form-group">
+                    <a href="/auth/facebook" class="btn-login btn btn-primary form-control"><span class="fa fa-facebook"></span> Facebook</a>
+                  </div>
+                  <div class="form-group">
+                    <a href="/auth/twitter" class="btn-login btn btn-info form-control"><span class="fa fa-twitter"></span> Twitter</a>
+                  </div>
+                  <div class="form-group">
+                    <a href="/auth/google" class="btn-login btn btn-danger form-control"><span class="fa fa-google-plus"></span> Google+</a>
+                  </div>
+                  
+                  <label id=remember-me class="checkbox">Remember Me
+                  <input type="checkbox" checked='checked'>
+                  </label> 
+                  <div class=clear-fix></div>
+                  <hr>
+                  <div class="btm-links">
+                    <a href='#'id="forgot-password">Forgot Your Password?</a>
+                    <a href='/#signup'id="create-account">Create An Account</a>
+                  </div>
+
+                 
+                 
+                </form>
+        
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+	  <br>
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#login">Back to top</a></p>
+        <p>&copy; 2016 Stream^N, Inc. &middot; <a href="#privacy">Privacy</a> &middot; <a href="#terms">Terms</a></p>
+      </footer>
+
+    </div>
+
+  <!-- display form errors in a custom modal window //-->
+  
+  <!-- Modal -->
+  <div class="modal-alert modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button data-dismiss="modal" class="close">x</button>
+          <h3>Alert!</h3>
+        </div>
+        <div class="modal-body">
+          <p class="message">Account Created!</p>
+          <ul></ul>
+        </div>
+        <div class="modal-footer">
+          <button data-dismiss="modal" class="btn btn-warning">OK</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->      
+    
+
+  </body>
+</html>    
+    
+     
+
+
+

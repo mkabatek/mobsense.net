@@ -1,0 +1,183 @@
+<section>
+ <html>
+   
+  <head>
+    <title>StreamN Account Settings</title>
+     
+  </head>
+  <body></body>
+  <!-- preset form values if we receive a userdata object //-->
+  <!-- store the userId on the client side in a hidden input field //-->
+  <input type="hidden" id="userId">
+  <div class = 'container' id="account-container">
+    <form method="post" id="account-form">
+      <h1></h1>
+      <p id="sub1" class="h4">Please tell us a little about yourself.</p>
+      <hr>
+      <fieldset>
+        <div id="name-cg" class="control-group">
+          <label for="name-tf" class="control-label">Name</label>
+          <div class="form-group">
+            <input id="name-tf" data-bind="value: name" type="text" name="name" class="form-control">
+          </div>
+        </div>
+        <div id="email-cg" class="control-group">
+          <label for="email-tf" class="control-label">Email</label>
+          <div class="form-group">
+            <input id="email-tf" data-bind="value: email" type="text" name="email" class="form-control">
+          </div>
+        </div>
+        <div id="clist-cg" class="control-group">
+          <label for="country-list" class="control-label">Location</label>
+          <div class="form-group">
+            <select class="form-control" id="country-list" name="country" data-bind="options: countries, optionsText: 'name', optionsValue: 'name', value: country">
+            </select>
+          </div>
+        </div>
+        <hr>
+        <p id="sub2" class="subheading"></p>
+        <div id="user-cg" class="control-group">
+          <label for="user-tf" class="control-label">Username</label>
+          <div class="form-group">
+            <input id="user-tf" data-bind="value: user" type="text" name="user" class="form-control">
+          </div>
+        </div>
+        <div id="pass-cg" class="control-group">
+          <label for="pass-tf" class="control-label">New Password</label>
+          <div class="form-group">
+            <input id="pass-tf" data-bind="value: pass" type="password" name="password" value="" class="form-control">
+          </div>
+        </div>
+
+      </fieldset>
+    </form>
+    
+    
+     <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+	<div class="row">
+
+		<!-- LOCAL INFORMATION -->
+		<div class="col-sm-6">
+			<div class="well">
+				<h3><span class="fa fa-user"></span> Local</h3>
+
+
+					<p style = 'word-wrap:break-word;' data-bind="with: local">
+						<strong>id</strong>:       <span data-bind = 'text: id'></span> <br>
+						<strong>email</strong>:    <span data-bind = 'text: email'></span> <br>
+						<strong>password</strong>: <span data-bind = 'text: password'></span> 
+					</p>
+
+					<a data-bind = 'click: locallink' class="btn btn-default">Update Account</a>
+
+
+			</div>
+		</div>
+
+		<!-- FACEBOOK INFORMATION -->
+		<div class="col-sm-6">
+			<div class="well">
+				<h3 class="text-primary"><span class="fa fa-facebook"></span> Facebook</h3>
+
+				<!-- check if the user has this token (is the user authenticated with this social account) -->
+
+					<p style = 'word-wrap:break-word;' data-bind="with: facebook">
+						<strong>id</strong>:     <span data-bind = 'text: id'></span> <br>
+						<strong>token</strong>:  <span data-bind = 'text: token'></span> <br>
+						<strong>email</strong>:  <span data-bind = 'text: email'></span> <br>
+						<strong>name</strong>:   <span data-bind = 'text: name'></span> <br>
+					</p>
+
+					<a href="/unlink/facebook" class="btn btn-primary">Unlink</a>
+
+					<a href="/connect/facebook" class="btn btn-primary">Connect Facebook</a>
+
+
+			</div>
+		</div>
+	</div>
+	<div class="row">
+
+		<!-- TWITTER INFORMATION -->
+		<div class="col-sm-6">
+			<div class="well">
+				<h3 class="text-info"><span class="fa fa-twitter"></span> Twitter</h3>
+
+
+					<p style = 'word-wrap:break-word;' data-bind="with: twitter">
+						<strong>id</strong>:           <span data-bind = 'text: id'></span><br>
+						<strong>token</strong>:        <span data-bind = 'text: token'></span><br>
+						<strong>display name</strong>: <span data-bind = 'text: displayname'></span><br>
+						<strong>username</strong>:     <span data-bind = 'text: username'></span> 
+					</p>
+
+					<a href="/unlink/twitter" class="btn btn-info">Unlink</a>
+				
+					<a href="/connect/twitter" class="btn btn-info">Connect Twitter</a>
+				
+
+			</div>
+		</div>
+
+		<!-- GOOGLE INFORMATION -->
+		<div class="col-sm-6">
+			<div class="well">
+				<h3 class="text-danger"><span class="fa fa-google-plus"></span> Google+</h3>
+
+
+					<p style = 'word-wrap:break-word;' data-bind="with: google">
+						<strong>id</strong>:    <span data-bind = 'text: id'></span><br>
+						<strong>token</strong>: <span data-bind = 'text: token'></span><br>
+						<strong>email</strong>: <span data-bind = 'text: email'></span><br>
+						<strong>name</strong>:  <span data-bind = 'text: name'></span>
+					</p>
+
+					<a href="/unlink/google" class="btn btn-danger">Unlink</a>
+
+					<a href="/connect/google" class="btn btn-danger">Connect Google</a>
+
+
+			</div>
+		</div>
+	</div>
+
+
+
+    <!-- FOOTER -->
+      <footer>
+        <p>&copy; 2016 Stream^N, Inc. &middot; <a href="#privacy">Privacy</a> &middot; <a href="#terms">Terms</a></p>
+      </footer>    
+    
+  </div>
+  <!-- display form errors in a custom modal window //-->
+ 
+ 
+  
+  <!-- Modal -->
+  <div class="modal-form-errors modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button data-dismiss="modal" class="close">x</button>
+          <h3>Alert!</h3>
+        </div>
+        <div class="modal-body">
+          <p class="subheading">Account updated.</p>
+          <ul></ul>
+        </div>
+        <div class="modal-footer">
+          <button data-dismiss="modal" class="btn btn-warning">OK</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+
+ </html>
+
+
+</section>
+

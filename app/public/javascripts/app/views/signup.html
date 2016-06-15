@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<style type='text/css'>
+body {
+    -background-color: #348eda;
+}  
+
+#account-form-container { 
+    -color: white;
+    -background-color: #348eda;
+    border:0px;
+    border-radius:0px;
+ 
+} 
+  
+</style>  
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Stream<sup>N</sup>Signup</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="../../dist/css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <!--
+    <link href="/stylesheets/vendor/bootstrap/carousel.css" rel="stylesheet">  
+    -->
+  </head>
+   
+  <body>
+
+  <!-- preset form values if we receive a userdata object //-->
+  <!-- store the userId on the client side in a hidden input field //-->
+  
+
+  <input type="hidden" id="userId">
+  <div class = 'container' id="account-container">
+    <form method="post" id="account-form">
+      <h1></h1>
+      <p id="sub1" class="h4">Connect an account to login.</p>
+      <hr>
+      <fieldset>
+
+        <div id="name-cg" class="control-group">
+          <label for="name-tf" class="control-label">Name</label>
+          <div class="form-group">
+            <input id="name-tf" data-bind="value: name" type="text" name="name" class="form-control">
+          </div>
+        </div>
+        <div id="email-cg" class="control-group">
+          <label for="email-tf" class="control-label">Email</label>
+          <div class="form-group">
+            <input id="email-tf" data-bind="value: email" type="text" name="email" class="form-control">
+          </div>
+        </div>
+        <div id="clist-cg" class="control-group">
+          <label for="country-list" class="control-label">Location</label>
+          <div class="form-group">
+            <select class="form-control" id="country-list" name="country" data-bind="options: countries, optionsText: 'name', optionsValue: 'name', value: country">
+            </select>
+          </div>
+        </div>
+        <hr>
+        <p id="sub2" class="subheading"></p>
+        <div id="user-cg" class="control-group">
+          <label for="user-tf" class="control-label">Username</label>
+          <div class="form-group">
+            <input id="user-tf" data-bind="value: user" type="text" name="user" class="form-control">
+          </div>
+        </div>
+        <div id="pass-cg" class="control-group">
+          <label for="pass-tf" class="control-label">Password</label>
+          <div class="form-group">
+            <input id="pass-tf" data-bind="value: pass" type="password" name="password" value="" class="form-control">
+          </div>
+        </div>
+        <br>
+        <div class="form-group form-actions">
+          <button data-bind="click: signup" id="account-form-btn2" class="btn form-control btn-primary">Create Account</button>
+        </div>
+      </fieldset>
+    </form>
+    
+    
+        <hr class="featurette-divider">
+
+      <div class="form-group">
+        <a href="/auth/facebook" class="btn-login btn btn-primary form-control"><span class="fa fa-facebook"></span> Facebook</a>
+      </div>
+      <div class="form-group">
+        <a href="/auth/twitter" class="btn-login btn btn-info form-control"><span class="fa fa-twitter"></span> Twitter</a>
+      </div>
+      <div class="form-group">
+        <a href="/auth/google" class="btn-login btn btn-danger form-control"><span class="fa fa-google-plus"></span> Google+</a>
+      </div>
+      
+      <label id=remember-me class="checkbox">Remember Me
+      <input type="checkbox" checked='checked'>
+      </label> 
+      <div class=clear-fix></div>
+      <hr>
+
+
+    <!-- /END THE FEATURETTES -->
+
+
+	  <br>
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#signup">Back to top</a></p>
+        <p>&copy; 2016 Stream^N, Inc. &middot; <a href="#privacy">Privacy</a> &middot; <a href="#terms">Terms</a></p>
+      </footer>
+    
+  </div>
+  <!-- display form errors in a custom modal window //-->
+  
+  <!-- Modal -->
+  <div class="modal-alert modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button data-dismiss="modal" class="close">x</button>
+          <h3>Whoops!</h3>
+        </div>
+        <div class="modal-body">
+          <p class="message">Account Created!</p>
+          <ul></ul>
+        </div>
+        <div class="modal-footer">
+          <button data-dismiss="modal" class="btn btn-warning">OK</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->  
+  
+  <!-- Modal -->
+  <div class="modal-form-errors modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button data-dismiss="modal" class="close">x</button>
+          <h3>Whoops!</h3>
+        </div>
+        <div class="modal-body">
+          <p class="subheading">It looks like there was a problem.</p>
+          <ul></ul>
+        </div>
+        <div class="modal-footer">
+          <button data-dismiss="modal" class="btn btn-warning">OK</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+
+ 
+
+
+
+  </body>
+</html>
+

@@ -1,0 +1,71 @@
+﻿<section>
+<meta charset=utf-8 />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<style> /* set the CSS */
+
+body { font: 12px Arial;}
+
+path { 
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+</style>
+
+
+
+<div  class = 'container' id="container">
+    
+    
+
+	
+	<div class="row">
+		<div class="form-group">
+		  <button id= 'clear' data-bind="click: clear" type="submit" class="form-control btn-primary">Clear Data</button>
+		</div>
+		<div class="form-group">
+		  <button id= 'download' data-bind="click: download" type="submit" class="form-control btn-primary">Download Data</button>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div id = "chartax" class="col-md-12"></div>
+	</div>
+	
+	
+	<div class="row">
+		<div id = "chartay" class="col-md-12"></div>
+	</div>
+	
+
+	<div class="row">
+		<div id = "chartaz" class="col-md-12"></div>
+	</div>
+
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+
+    <!-- FOOTER -->
+    <footer>
+    <!--<p data-bind = 'click: tutorial' class="pull-right"><a href="#">Help</a></p>-->
+    <p>&copy; 2016 Stream^N, Inc. &middot; <a href="#privacy">Privacy</a> &middot; <a href="#terms">Terms</a></p>
+    </footer>   
+
+    
+</div>
+
+</section>
+
