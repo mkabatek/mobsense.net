@@ -2,3 +2,4 @@ node_modules/
 log/
 data/
 out.log
+.DS_Store

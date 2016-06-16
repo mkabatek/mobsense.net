@@ -494,45 +494,8 @@ define(['knockout', 'durandal/app', 'socket.io', 'kosortable', 'd3'], function (
 
         intro.setOptions({
             steps: [{
-                    intro: "Welcome to stream<sup>N</sup>" + "<br><br>" + "This tutorial will guide you through the process of creating " + "and managing your cloud media player." + "<br>"
-                }, {
-                    element: document.querySelector('#playlist-container'),
-                    intro: "Manage playlists" + "<br><br>" + "Manage your playlists here. Your playlists are collections of links to media on the web. You can save as many playlists as you like!" + "<br>",
-                    position: 'bottom'
-                }, {
-                    element: document.querySelector('#add-playlist'),
-                    intro: "Create new playlist" + "<br><br>" + "Click here to add a new playlist." + "<br>",
-                    position: 'bottom'
-                }, {
-                    element: document.querySelector('#playlists'),
-                    intro: "Select/rename/delete playlist" + "<br><br>" + "<ul>" + "<li>Click a playlist to select it.</li>" + "<li>Double click a playlist to rename.</li>" + "<li>Remove a playlist by deleting its name.</li>" + "<li>Click away from the edit box to deselect.</li>" + "</ul>" + "<br>",
-                    position: 'bottom'
-                }, {
-                    element: document.querySelector('#playlist-group'),
-                    intro: "Build playlist" + "<br><br>" + "Build your playlists here. Add, remove, enqueue, or arrange media in the selected playlist." + "<br>",
-                    position: 'bottom'
-                }, {
-                    element: document.querySelector('#add-to-playlist'),
-                    intro: "Add links to selected playlist" + "<br><br>" + "Build your playlist with links from Soundcloud, Youtube, Dropbox, or an arbitrary media url on the web." + "<br>",
-                    position: 'bottom'
-                }, {
-                    element: document.querySelector('.glyphicon-play'),
-                    intro: "Enqueue single link/create stream" + "<br><br>" + "Add an individual song from your playlist to your queue. Your stream will automatically start once a track is in your queue." + "<br>",
-                    position: 'right'
-                }, {
-                    element: document.querySelector('#playlist'),
-                    intro: "Enqueue entire playlist" + "<br><br>" + "Click here to add the entire playlist to your queue." + "<br>",
-                    position: 'bottom'
-                }, {
-                    element: document.querySelector('#streamGroup'),
-                    intro: "Tune in and manage your queue" + "<br><br>" + "Tune into your stream, share, listen with your friends in real time." + "<br>",
-                    position: 'top'
-                }, {
-                    element: document.querySelector('#twitter'),
-                    intro: "Share and listen with friends" + "<br><br>" + "Share your stream on your favorite social network, stream and have fun!" + "<br>",
-                    position: 'bottom'
+                    intro: "Welcome to MobSense" + "<br><br>" + "This tutorial will guide you through the process of using MobSense"
                 }
-
             ],
             showStepNumbers: false,
             showBullets: false
