@@ -25,6 +25,7 @@
 
 ####MobSense is built on top of the following libraries :
 
+
 * [Node.js](http://nodejs.org/) - Application Server
 * [Express.js](http://expressjs.com/) - Node.js Web Framework
 * [MongoDb](http://www.mongodb.org/) - Database Storage
@@ -35,6 +36,7 @@
 * [Twitter Bootstrap](http://twitter.github.com/bootstrap/) - UI Component & Layout Library
 * [socket.io](http://socket.io) Socket.IO enables real-time bidirectional event-based communication.
 * [Passport](http://passportjs.org/) Passport is authentication middleware for Node.js.
+* [Durandal](http://durandaljs.com/) Single Page Apps Done Right.
 
 ***
 
